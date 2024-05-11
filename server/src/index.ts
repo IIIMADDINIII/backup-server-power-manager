@@ -1,9 +1,13 @@
+import Fastify from 'fastify';
 
-import prod from "consts:production";
-import { helloWorld } from "./api.js";
+const server = Fastify();
+server.get("/", async function handler(_request, _reply) {
+  return { hello: 'world' };
+});
 
-
-prod;
-
-export { helloWorld };
-helloWorld(false);
+try {
+  await server.listen({ port: 80, host: "0.0.0.0" });
+} catch (e) {
+  console.error(e);
+  process.exit(-1);
+}

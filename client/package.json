@@ -1,7 +1,7 @@
 {
   "name": "@app/client",
   "version": "0.0.1",
-  "description": "Template for creating a NodeJs package",
+  "description": "Client (Browser) side of the Application",
   "exports": {
     ".": {
       "import": {
@@ -16,20 +16,12 @@
     "build": "pnpm run gulp build",
     "buildCi": "pnpm run gulp buildCi",
     "test": "pnpm run gulp test",
-    "gulp": "pnpm --package=@iiimaddiniii/js-build-tool-cli@0.8.4 dlx js-build-tool"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/IIIMADDINIII/node-package-template"
+    "gulp": "pnpm --package=@iiimaddiniii/js-build-tool-cli@0.8.5 dlx js-build-tool"
   },
   "author": "IIIMADDINIII <martin@elend.name>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/IIIMADDINIII/node-package-template/issues"
-  },
-  "homepage": "https://github.com/IIIMADDINIII/node-package-template#readme",
   "devDependencies": {
-    "@types/js-build-tool-types": "npm:@iiimaddiniii/js-build-tool-types@^0.8.4"
+    "@types/js-build-tool-types": "npm:@iiimaddiniii/js-build-tool-types@^0.8.5"
   },
   "dependencies": {
     "tslib": "^2.6.2",

@@ -1,5 +1,9 @@
 import { tasks, tools } from "@iiimaddiniii/js-build-tool";
 
+async function runDockerUp() {
+  tools.exec`docker compose up --build`;
+}
+
 export const clean = tools.exitAfter(
   tasks.cleanWithGit());
 
@@ -12,6 +16,10 @@ export const buildCi = tools.exitAfter(
   tasks.prodInstallDependencies(),
   tasks.rollup.buildAndRunTests());
 
-export const test = tools.exitAfter(
+export const start = tools.exitAfter(
+  runDockerUp);
+
+export const buildAndStart = tools.exitAfter(
   tasks.installDependencies(),
-  tasks.rollup.buildAndRunTests());
+  tasks.runScriptsInPackages({ "*": "build" }),
+  runDockerUp);

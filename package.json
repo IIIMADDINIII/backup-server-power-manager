@@ -7,20 +7,21 @@
     "clean": "pnpm run gulp clean",
     "build": "pnpm run gulp build",
     "buildCi": "pnpm run gulp buildCi",
-    "test": "pnpm run gulp test",
-    "gulp": "pnpm --package=@iiimaddiniii/js-build-tool-cli@0.8.4 dlx js-build-tool"
+    "start": "pnpm run gulp start",
+    "buildAndStart": "pnpm run gulp buildAndStart",
+    "gulp": "pnpm --package=@iiimaddiniii/js-build-tool-cli@0.8.5 dlx js-build-tool"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IIIMADDINIII/node-package-template"
+    "url": "git+https://github.com/IIIMADDINIII/backup-server-power-manager"
   },
   "author": "IIIMADDINIII <martin@elend.name>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/IIIMADDINIII/node-package-template/issues"
+    "url": "https://github.com/IIIMADDINIII/backup-server-power-manager/issues"
   },
-  "homepage": "https://github.com/IIIMADDINIII/node-package-template#readme",
+  "homepage": "https://github.com/IIIMADDINIII/backup-server-power-manager#readme",
   "devDependencies": {
-    "@types/js-build-tool-types": "npm:@iiimaddiniii/js-build-tool-types@^0.8.4"
+    "@types/js-build-tool-types": "npm:@iiimaddiniii/js-build-tool-types@^0.8.5"
   }
 }
