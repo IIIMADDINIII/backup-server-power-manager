@@ -1,7 +1,7 @@
 import { tasks, tools } from "@iiimaddiniii/js-build-tool";
 
 async function runDockerUp() {
-  tools.exec`docker compose up --build`;
+  await tools.exec`docker compose up --build`;
 }
 
 export const clean = tools.exitAfter(
