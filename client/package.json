@@ -1,8 +1,16 @@
 {
-  "name": "backup-server-power-manager",
+  "name": "@app/client",
   "version": "0.0.1",
   "description": "Template for creating a NodeJs package",
-  "main": "./server/dist/index.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      }
+    }
+  },
+  "type": "module",
   "scripts": {
     "clean": "pnpm run gulp clean",
     "build": "pnpm run gulp build",
@@ -22,5 +30,9 @@
   "homepage": "https://github.com/IIIMADDINIII/node-package-template#readme",
   "devDependencies": {
     "@types/js-build-tool-types": "npm:@iiimaddiniii/js-build-tool-types@^0.8.4"
+  },
+  "dependencies": {
+    "tslib": "^2.6.2",
+    "@app/common": "workspace:*"
   }
 }

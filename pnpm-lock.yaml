@@ -7,6 +7,41 @@ settings:
 importers:
 
   .:
+    devDependencies:
+      '@types/js-build-tool-types':
+        specifier: npm:@iiimaddiniii/js-build-tool-types@^0.8.4
+        version: '@iiimaddiniii/js-build-tool-types@0.8.4(@types/node@20.8.10)(typescript@5.2.2)'
+
+  client:
+    dependencies:
+      '@app/common':
+        specifier: workspace:*
+        version: link:../common
+      tslib:
+        specifier: ^2.6.2
+        version: 2.6.2
+    devDependencies:
+      '@types/js-build-tool-types':
+        specifier: npm:@iiimaddiniii/js-build-tool-types@^0.8.4
+        version: '@iiimaddiniii/js-build-tool-types@0.8.4(@types/node@20.8.10)(typescript@5.2.2)'
+
+  common:
+    dependencies:
+      tslib:
+        specifier: ^2.6.2
+        version: 2.6.2
+    devDependencies:
+      '@jest/globals':
+        specifier: ^29.7.0
+        version: 29.7.0
+      '@types/js-build-tool-types':
+        specifier: npm:@iiimaddiniii/js-build-tool-types@^0.8.4
+        version: '@iiimaddiniii/js-build-tool-types@0.8.4(@types/node@20.8.10)(typescript@5.2.2)'
+      jest:
+        specifier: ^29.7.0
+        version: 29.7.0(@types/node@20.8.10)
+
+  server:
     dependencies:
       tslib:
         specifier: ^2.6.2

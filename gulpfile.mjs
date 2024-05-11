@@ -5,7 +5,7 @@ export const clean = tools.exitAfter(
 
 export const build = tools.exitAfter(
   tasks.installDependencies(),
-  tasks.rollup.build());
+  tasks.runScriptsInPackages({ "*": "build" }));
 
 export const buildCi = tools.exitAfter(
   tasks.cleanWithGit(),
