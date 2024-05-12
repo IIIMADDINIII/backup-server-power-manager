@@ -49,6 +49,9 @@ importers:
 
   server:
     dependencies:
+      '@app/common':
+        specifier: workspace:*
+        version: link:../common
       '@fastify/static':
         specifier: ^7.0.4
         version: 7.0.4

@@ -3,3 +3,5 @@ services:
     build: .
     ports: 
       - 8888:80
+    environment:
+      - START_SERVER_URL=http://backup.elend.name:1/

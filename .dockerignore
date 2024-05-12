@@ -3,6 +3,7 @@
 /*/gulpfile.mjs
 /*/jest.config.mjs
 /*/tsconfig.json
+/*/package.json
 
 /.git/
 /.vscode/

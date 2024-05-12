@@ -11,6 +11,7 @@
     "buildAndStart": "pnpm run gulp buildAndStart",
     "gulp": "pnpm --package=@iiimaddiniii/js-build-tool-cli@0.8.5 dlx js-build-tool"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/IIIMADDINIII/backup-server-power-manager"

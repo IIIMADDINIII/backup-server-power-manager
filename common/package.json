@@ -5,15 +5,12 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/esm/index.d.ts",
-        "default": "./dist/esm/index.js"
-      },
-      "require": {
-        "types": "./dist/cjs/index.d.ts",
-        "default": "./dist/cjs/index.js"
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
       }
     }
   },
+  "type": "module",
   "scripts": {
     "clean": "pnpm run gulp clean",
     "build": "pnpm run gulp build",

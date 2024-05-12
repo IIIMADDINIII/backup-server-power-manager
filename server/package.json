@@ -5,8 +5,8 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/esm/index.d.ts",
-        "default": "./dist/esm/index.js"
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
       }
     }
   },
@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "tslib": "^2.6.2",
+    "@app/common": "workspace:*",
     "fastify": "^4.27.0",
     "@fastify/static": "^7.0.4",
     "@fastify/type-provider-typebox": "^4.0.0",
