@@ -1,7 +1,15 @@
 import fastifyStatic from "@fastify/static";
+import type { TypeBoxTypeProvider } from "@fastify/type-provider-typebox";
 import Fastify from 'fastify';
 
-const server = Fastify();
+
+
+
+
+
+
+
+const server = Fastify().withTypeProvider<TypeBoxTypeProvider>();
 
 server.register(fastifyStatic, { root: process.cwd(), serve: false });
 
@@ -21,6 +29,11 @@ server.get("/index.js", async function handler(_request, reply) {
 // index.js.map
 server.get("/index.js.map", async function handler(_request, reply) {
   return reply.sendFile("./client/dist/index.js.map");
+});
+
+// Get server Power Status
+server.get("/status", async function handler(_request, response) {
+
 });
 
 try {

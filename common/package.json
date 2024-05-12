@@ -29,6 +29,7 @@
     "@types/js-build-tool-types": "npm:@iiimaddiniii/js-build-tool-types@^0.8.5"
   },
   "dependencies": {
-    "tslib": "^2.6.2"
+    "tslib": "^2.6.2",
+    "@sinclair/typebox": "^0.32.30"
   }
 }

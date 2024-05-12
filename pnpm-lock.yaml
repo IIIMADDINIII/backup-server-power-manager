@@ -30,6 +30,9 @@ importers:
 
   common:
     dependencies:
+      '@sinclair/typebox':
+        specifier: ^0.32.30
+        version: 0.32.30
       tslib:
         specifier: ^2.6.2
         version: 2.6.2
@@ -49,6 +52,12 @@ importers:
       '@fastify/static':
         specifier: ^7.0.4
         version: 7.0.4
+      '@fastify/type-provider-typebox':
+        specifier: ^4.0.0
+        version: 4.0.0(@sinclair/typebox@0.32.30)
+      '@sinclair/typebox':
+        specifier: ^0.32.30
+        version: 0.32.30
       fastify:
         specifier: ^4.27.0
         version: 4.27.0
@@ -264,6 +273,11 @@ packages:
   '@fastify/static@7.0.4':
     resolution: {integrity: sha512-p2uKtaf8BMOZWLs6wu+Ihg7bWNBdjNgCwDza4MJtTqg+5ovKmcbgbR9Xs5/smZ1YISfzKOCNYmZV8LaCj+eJ1Q==}
 
+  '@fastify/type-provider-typebox@4.0.0':
+    resolution: {integrity: sha512-kTlN0saC/+xhcQPyBjb3YONQAMjiD/EHlCRjQjsr5E3NFjS5K8ZX5LGzXYDRjSa+sV4y8gTL5Q7FlObePv4iTA==}
+    peerDependencies:
+      '@sinclair/typebox': '>=0.26 <=0.32'
+
   '@iiimaddiniii/js-build-tool-types@0.8.5':
     resolution: {integrity: sha512-Cw25W+FE0j3bPdpSOXNaEKMEKDP6vqA9q4cn40KmvgRNZuXESQhfPFutzJA+GckO/bx+nxer4SmATR1PiLue5Q==}
     peerDependencies:
@@ -382,6 +396,9 @@ packages:
 
   '@sinclair/typebox@0.27.8':
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
+
+  '@sinclair/typebox@0.32.30':
+    resolution: {integrity: sha512-IYK1H0k2sHVB2GjzBK2DXBErhex45GoLuPdgn8lNw5t0+5elIuhpixOMPobFyq6kE0AGIBa4+76Ph4enco0q2Q==}
 
   '@sinonjs/commons@3.0.0':
     resolution: {integrity: sha512-jXBtWAF4vmdNmZgD5FoKsVLv3rPgDnLgPbU84LIJ3otV44vJlDRokVng5v8NFJdCf/da9legHcKaRuZs4L7faA==}
@@ -1791,6 +1808,10 @@ snapshots:
       fastq: 1.17.1
       glob: 10.3.14
 
+  '@fastify/type-provider-typebox@4.0.0(@sinclair/typebox@0.32.30)':
+    dependencies:
+      '@sinclair/typebox': 0.32.30
+
   '@iiimaddiniii/js-build-tool-types@0.8.5(@types/node@20.8.10)(typescript@5.2.2)':
     dependencies:
       '@types/node': 20.8.10
@@ -2006,6 +2027,8 @@ snapshots:
     optional: true
 
   '@sinclair/typebox@0.27.8': {}
+
+  '@sinclair/typebox@0.32.30': {}
 
   '@sinonjs/commons@3.0.0':
     dependencies:

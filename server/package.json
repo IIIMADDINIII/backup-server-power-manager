@@ -29,6 +29,8 @@
   "dependencies": {
     "tslib": "^2.6.2",
     "fastify": "^4.27.0",
-    "@fastify/static": "^7.0.4"
+    "@fastify/static": "^7.0.4",
+    "@fastify/type-provider-typebox": "^4.0.0",
+    "@sinclair/typebox": "^0.32.30"
   }
 }
