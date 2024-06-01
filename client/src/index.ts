@@ -8,13 +8,7 @@ async function main() {
 }
 
 function setDocumentStyles() {
-  const styleSheet = css`
-    html, body {
-      height: 100%;
-      width: 100%;
-      margin: 0px;
-    }
-  `.styleSheet;
+  const styleSheet = css``.styleSheet;
   if (styleSheet === undefined) throw new Error("Error while creating Document Styles");
   document.adoptedStyleSheets = [...document.adoptedStyleSheets, styleSheet];
 }
