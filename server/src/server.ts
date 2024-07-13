@@ -1,6 +1,6 @@
 import { PowerStatus } from "@app/common";
 import fastifyStatic from "@fastify/static";
-import type { TypeBoxTypeProvider } from "@fastify/type-provider-typebox";
+import { Type, type TypeBoxTypeProvider } from "@fastify/type-provider-typebox";
 import Fastify from "fastify";
 import { PowerManager } from "./powerManager.js";
 
@@ -29,6 +29,11 @@ export async function createServerWithRoutes(powerManager: PowerManager) {
   // Get server Power Status
   server.get("/status", { schema: { response: { 200: PowerStatus } } }, async function handler(_request, _response) {
     return powerManager.getStatus();
+  });
+
+  // Manual Start of the Server
+  server.get("/setManualMode", { schema: { querystring: Type.Object({ value: Type.Boolean() }) } }, async function handler(request, _response,) {
+    await powerManager.setManualMode(request.query.value);
   });
 
   await server.listen({ port: 80, host: "0.0.0.0" });

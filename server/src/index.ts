@@ -4,6 +4,7 @@ import { createServerWithRoutes } from "./server.js";
 
 async function main(): Promise<number> {
   const powerManager = new PowerManager();
+  await powerManager.init();
   const server = await createServerWithRoutes(powerManager);
   await new Promise((res) => process.once("SIGINT", res));
   await server.close();
